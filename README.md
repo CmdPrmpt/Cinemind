@@ -103,6 +103,7 @@ npm start
 ## Acknowledgments
 
 Inspired by [Watchly](https://github.com/TimilsinaBimal/Watchly) by TimilsinaBimal.
+This project was vibecoded with AI assistance.
 
 ## License
 
