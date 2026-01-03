@@ -1,0 +1,27 @@
+{
+    "name": "cinemind-stremio-addon",
+    "version": "8.3.0",
+    "description": "Personalized Recommendations Stremio Addon with MDBlist/Stremio library support",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "node --watch src/index.js"
+    },
+    "dependencies": {
+        "@keyv/sqlite": "^3.6.7",
+        "axios": "^1.6.0",
+        "axios-retry": "^4.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-rate-limit": "^7.1.5",
+        "helmet": "^7.1.0",
+        "keyv": "^4.5.4",
+        "stremio-addon-sdk": "^1.6.10"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "author": "",
+    "license": "MIT"
+}
