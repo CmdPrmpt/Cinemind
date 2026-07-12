@@ -65,7 +65,7 @@ For production with Traefik, update `docker-compose.yml` with your domain and en
 | `NODE_ENV` | ❌ No | Environment mode (default: `production`) |
 | `STATS_USER` | ❌ No | Username for the debug panel HTTP Basic Auth |
 | `STATS_PASS` | ❌ No | Password for the debug panel HTTP Basic Auth |
-| `DOCKER_NETWORK` | ❌ No | Docker network name for Traefik (default: `aio_network`) |
+| `DOCKER_NETWORK` | ❌ No | Docker network name for Traefik (default: `traefik_net`). Only needed if deploying with the provided docker-compose.yml and Traefik. |
 
 *\*Required if using Nuvio as a library source.*
 
