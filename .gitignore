@@ -1,0 +1,18 @@
+# Secrets and environment
+.env
+
+# User data (configs, caches, WAL)
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Dependencies
+node_modules/
+
+# IDE / local config
+.reasonix/
+
+# OS
+.DS_Store
+Thumbs.db

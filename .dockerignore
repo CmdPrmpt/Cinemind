@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Data (user configs, caches)
+data/
+cache.sqlite
+
+# Git
+.git/
+
+# Dependencies
+node_modules/

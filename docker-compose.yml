@@ -1,0 +1,30 @@
+services:
+  addon:
+    build: .
+    container_name: stremio-recs
+    restart: always
+    expose:
+      - "7000"
+    volumes:
+      # Persist user configs and cache data
+      - ./data:/app/data
+    env_file:
+      - .env
+    networks:
+      - traefik_net
+    labels:
+      - "traefik.enable=true"
+      
+      ## ROUTER CONFIGURATION ##
+      - "traefik.http.routers.stremio-recs.rule=Host(`your-domain.example.com`)"
+      - "traefik.http.routers.stremio-recs.entrypoints=websecure"
+      - "traefik.http.routers.stremio-recs.tls=true"
+      - "traefik.http.routers.stremio-recs.tls.certresolver=letsencrypt"
+      
+      ## SERVICE CONFIGURATION ##
+      - "traefik.http.services.stremio-recs.loadbalancer.server.port=7000"
+
+networks:
+  traefik_net:
+    external: true
+    name: ${DOCKER_NETWORK}
